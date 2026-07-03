@@ -1,14 +1,39 @@
-import { useState } from 'react';
 import { useRevealOnScroll } from '../hooks/useReveal';
 
+const TO_EMAIL = 'uwijon007@yahoo.fr';
+
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
   useRevealOnScroll('.contact-detail');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    const form = e.target;
+    const firstName = form.firstName.value.trim();
+    const lastName = form.lastName.value.trim();
+    const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
+    const service = form.service.value;
+    const message = form.message.value.trim();
+
+    if (!firstName || !lastName || !email || !service || !message) {
+      return;
+    }
+
+    const subject = `Chalumeaux D'Or — ${service} inquiry from ${firstName} ${lastName}`;
+    const body = [
+      `Name: ${firstName} ${lastName}`,
+      `Email: ${email}`,
+      phone ? `Phone: ${phone}` : null,
+      `Service: ${service}`,
+      '',
+      'Message:',
+      message,
+    ]
+      .filter(Boolean)
+      .join('\n');
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(TO_EMAIL)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(gmailUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -87,25 +112,43 @@ export default function Contact() {
             <form onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
-                  <label>First Name</label>
-                  <input type="text" placeholder="Your first name" />
+                  <label htmlFor="firstName">First Name</label>
+                  <input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    placeholder="Your first name"
+                    required
+                  />
                 </div>
                 <div className="form-group">
-                  <label>Last Name</label>
-                  <input type="text" placeholder="Your last name" />
+                  <label htmlFor="lastName">Last Name</label>
+                  <input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    placeholder="Your last name"
+                    required
+                  />
                 </div>
               </div>
               <div className="form-group">
-                <label>Email Address</label>
-                <input type="email" placeholder="your@email.com" />
+                <label htmlFor="email">Email Address</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  required
+                />
               </div>
               <div className="form-group">
-                <label>Phone Number</label>
-                <input type="tel" placeholder="+250 ..." />
+                <label htmlFor="phone">Phone Number</label>
+                <input id="phone" name="phone" type="tel" placeholder="+250 ..." />
               </div>
               <div className="form-group">
-                <label>Service Needed</label>
-                <select defaultValue="">
+                <label htmlFor="service">Service Needed</label>
+                <select id="service" name="service" defaultValue="" required>
                   <option value="" disabled>
                     Select a service
                   </option>
@@ -119,22 +162,16 @@ export default function Contact() {
                 </select>
               </div>
               <div className="form-group">
-                <label>Your Message</label>
-                <textarea placeholder="Tell us about your project or inquiry..." />
+                <label htmlFor="message">Your Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us about your project or inquiry..."
+                  required
+                />
               </div>
-              <button
-                type="submit"
-                className="form-submit"
-                style={
-                  submitted
-                    ? {
-                        background: 'linear-gradient(135deg,#4a7c4e,#5a9e60)',
-                        color: 'white',
-                      }
-                    : undefined
-                }
-              >
-                {submitted ? '✓ Message Sent!' : 'Send Message →'}
+              <button type="submit" className="form-submit">
+                Send via Gmail →
               </button>
             </form>
           </div>
