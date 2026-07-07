@@ -50,23 +50,24 @@ export default function Gallery() {
         <div
           role="dialog"
           aria-modal="true"
+          className="lightbox"
           onClick={() => setLightbox(null)}
-          style={{
-            position: 'fixed',
-            inset: 0,
-            background: 'rgba(0,0,0,0.92)',
-            zIndex: 1000,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '2rem',
-            cursor: 'pointer',
-          }}
         >
+          <button
+            type="button"
+            className="lightbox-close"
+            aria-label="Close"
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightbox(null);
+            }}
+          >
+            ×
+          </button>
           <img
             src={lightbox}
             alt="Enlarged jewellery photo"
-            style={{ maxWidth: '100%', maxHeight: '90vh', objectFit: 'contain' }}
+            onClick={(e) => e.stopPropagation()}
           />
         </div>
       )}
