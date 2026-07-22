@@ -39,7 +39,7 @@ export default function Hero() {
         />
       ))}
 
-      <div className="hero-eyebrow">Est. 2010 — Kigali, Rwanda</div>
+      <div className="hero-eyebrow">Est. 2013 — Kigali, Rwanda</div>
       {heroPhoto && (
         <img
           src={heroPhoto}
@@ -54,7 +54,7 @@ export default function Hero() {
       </h1>
       <p className="hero-tagline">L&apos;Art de Sublimer l&apos;Éternel</p>
       <div className="hero-divider" />
-      <p className="hero-since">✦ &nbsp; Since 2010 &nbsp; ✦ &nbsp; Kigali, Rwanda &nbsp; ✦</p>
+      <p className="hero-since">✦ &nbsp; Since 2013 &nbsp; ✦ &nbsp; Kigali, Rwanda &nbsp; ✦</p>
       <div className="hero-actions">
         <a href="#collections" className="btn-primary">
           <span>Explore Collections</span>

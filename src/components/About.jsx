@@ -16,7 +16,7 @@ export default function About() {
               )}
             </div>
             <div className="about-badge">
-              <div className="year">15+</div>
+              <div className="year">13+</div>
               <div className="since">Years of Craft</div>
             </div>
           </div>
@@ -33,7 +33,7 @@ export default function About() {
               <div className="ornament-line" />
             </div>
             <p>
-              Founded in 2010, Chalumeaux D&apos;Or has been Kigali&apos;s most trusted name in fine
+              Founded in 2013, Chalumeaux D&apos;Or has been Kigali&apos;s most trusted name in fine
               jewellery craftsmanship. Born from a deep love of the art form, our atelier combines
               traditional goldsmithing techniques with a modern vision.
             </p>
@@ -49,7 +49,7 @@ export default function About() {
             </p>
             <div className="about-stats">
               <div>
-                <div className="stat-num">2010</div>
+                <div className="stat-num">2013</div>
                 <div className="stat-label">Founded</div>
               </div>
               <div>

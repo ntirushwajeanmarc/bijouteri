@@ -1,5 +1,28 @@
 import { useRevealOnScroll } from '../hooks/useReveal';
 
+function ChurchIcon() {
+  return (
+    <svg
+      className="service-icon-svg"
+      viewBox="0 0 48 48"
+      width="40"
+      height="40"
+      aria-hidden="true"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    >
+      {/* Peaked roof + walls — no cross */}
+      <path d="M10 22 L24 10 L38 22" />
+      <path d="M12 22v18h24V22" />
+      <path d="M20 40v-10h8v10" />
+      <path d="M17 28h5M26 28h5" />
+    </svg>
+  );
+}
+
 const services = [
   {
     icon: '💍',
@@ -26,7 +49,7 @@ const services = [
     desc: 'Give new life to old jewellery. We reimagine and transform existing pieces into modern designs that honour their sentimental value while refreshing their style.',
   },
   {
-    icon: '💒',
+    icon: <ChurchIcon />,
     num: '05',
     title: 'Wedding & Engagement',
     desc: 'Celebrate your love with handcrafted wedding and engagement rings. We guide couples through every detail to create the perfect symbol of their commitment.',

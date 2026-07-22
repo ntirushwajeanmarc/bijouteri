@@ -1,6 +1,6 @@
 import { useRevealOnScroll } from '../hooks/useReveal';
 
-const TO_EMAIL = 'uwijon007@yahoo.fr';
+const TO_EMAIL = 'bijouteriechalumeaudor@gmail.com';
 
 export default function Contact() {
   useRevealOnScroll('.contact-detail');
@@ -66,9 +66,7 @@ export default function Contact() {
               <div className="contact-detail-text">
                 <div className="label">Phone</div>
                 <div className="value">
-                  <a href="tel:+250783377346">+250 783 377 346</a>
-                  <br />
-                  <a href="tel:+250722377346">+250 722 377 346</a>
+                  <a href="tel:+250795694412">0795 694 412</a>
                 </div>
               </div>
             </div>
@@ -77,7 +75,9 @@ export default function Contact() {
               <div className="contact-detail-text">
                 <div className="label">Email</div>
                 <div className="value">
-                  <a href="mailto:uwijon007@yahoo.fr">uwijon007@yahoo.fr</a>
+                  <a href="mailto:bijouteriechalumeaudor@gmail.com">
+                    bijouteriechalumeaudor@gmail.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -144,7 +144,7 @@ export default function Contact() {
               </div>
               <div className="form-group">
                 <label htmlFor="phone">Phone Number</label>
-                <input id="phone" name="phone" type="tel" placeholder="+250 ..." />
+                <input id="phone" name="phone" type="tel" placeholder="0795 ..." />
               </div>
               <div className="form-group">
                 <label htmlFor="service">Service Needed</label>

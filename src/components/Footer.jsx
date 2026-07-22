@@ -7,19 +7,41 @@ export default function Footer() {
             <span className="logo">CHALUMEAUX D&apos;OR</span>
             <p>
               L&apos;Art de Sublimer l&apos;Éternel — Fine jewellery crafted with passion in Kigali
-              since 2010.
+              since 2013.
             </p>
             <div className="footer-social">
-              <a href="#" className="social-btn" title="Facebook">
+              <a
+                href="https://www.facebook.com/profile.php?id=61590173807214"
+                className="social-btn"
+                title="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 f
               </a>
-              <a href="#" className="social-btn" title="Instagram">
+              <a
+                href="https://www.instagram.com/bijouteriechalumeaudor/"
+                className="social-btn"
+                title="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 ig
               </a>
-              <a href="#" className="social-btn" title="WhatsApp">
-                wa
+              <a
+                href="https://www.tiktok.com/@bijouteriechalumeaudor"
+                className="social-btn"
+                title="TikTok"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                tk
               </a>
-              <a href="mailto:uwijon007@yahoo.fr" className="social-btn" title="Email">
+              <a
+                href="mailto:bijouteriechalumeaudor@gmail.com"
+                className="social-btn"
+                title="Email"
+              >
                 @
               </a>
             </div>
@@ -80,13 +102,12 @@ export default function Footer() {
                 <a href="#">Room B08, Kigali</a>
               </li>
               <li>
-                <a href="tel:+250783377346">+250 783 377 346</a>
+                <a href="tel:+250795694412">0795 694 412</a>
               </li>
               <li>
-                <a href="tel:+250722377346">+250 722 377 346</a>
-              </li>
-              <li>
-                <a href="mailto:uwijon007@yahoo.fr">uwijon007@yahoo.fr</a>
+                <a href="mailto:bijouteriechalumeaudor@gmail.com">
+                  bijouteriechalumeaudor@gmail.com
+                </a>
               </li>
             </ul>
           </div>
