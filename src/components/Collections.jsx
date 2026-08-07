@@ -1,4 +1,5 @@
 import { getCollectionPhotos } from '../data/gallery';
+import { WHATSAPP_URL } from '../data/contact';
 import { useRevealOnScroll } from '../hooks/useReveal';
 
 const collections = [
@@ -42,8 +43,13 @@ export default function Collections() {
                 <div className="collection-tag">{col.tag}</div>
                 <div className="collection-name">{col.name}</div>
                 <div className="collection-desc">{col.desc}</div>
-                <a href="#contact" className="collection-cta">
-                  Enquire Now →
+                <a
+                  href={WHATSAPP_URL}
+                  className="collection-cta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp Us →
                 </a>
               </div>
             </div>

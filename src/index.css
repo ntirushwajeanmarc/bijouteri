@@ -139,6 +139,7 @@ nav.scrolled { background: rgba(8,8,8,0.97); border-bottom: 1px solid var(--bord
 .stars { color: var(--gold); font-size: 0.7rem; letter-spacing: 0.1em; margin-bottom: 1.2rem; }
 
 .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: start; margin-top: 5rem; }
+.contact-grid-whatsapp { align-items: stretch; }
 .contact-info h3 { font-family: 'Cinzel', serif; font-size: 1.6rem; font-weight: 400; color: var(--white); margin-bottom: 1.5rem; }
 .contact-info p { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; line-height: 1.8; color: var(--white-dim); margin-bottom: 3rem; }
 .contact-detail { display: flex; align-items: flex-start; gap: 1.2rem; margin-bottom: 1.8rem; }
@@ -147,17 +148,63 @@ nav.scrolled { background: rgba(8,8,8,0.97); border-bottom: 1px solid var(--bord
 .contact-detail-text .value { font-size: 0.9rem; color: var(--white); line-height: 1.5; }
 .contact-detail-text a { color: var(--white); text-decoration: none; transition: color 0.3s; }
 .contact-detail-text a:hover { color: var(--gold); }
-.contact-form { background: var(--black-card); border: 1px solid var(--border); padding: 3rem; }
-.contact-form h3 { font-family: 'Cinzel', serif; font-size: 1.1rem; letter-spacing: 0.08em; color: var(--white); margin-bottom: 2.5rem; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-.form-group { margin-bottom: 1.2rem; }
-.form-group label { display: block; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(201,168,76,0.7); margin-bottom: 0.6rem; }
-.form-group input, .form-group select, .form-group textarea { width: 100%; background: rgba(255,255,255,0.03); border: 1px solid var(--border); color: var(--white); padding: 0.85rem 1rem; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; outline: none; transition: border-color 0.3s, background 0.3s; -webkit-appearance: none; }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: rgba(201,168,76,0.6); background: rgba(201,168,76,0.03); }
-.form-group select option { background: var(--black-card); }
-.form-group textarea { min-height: 110px; resize: vertical; }
-.form-submit { width: 100%; padding: 1.1rem; background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light)); color: var(--black); border: none; font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; font-weight: 600; transition: all 0.3s; margin-top: 1rem; }
-.form-submit:hover { background: linear-gradient(135deg, var(--gold-light), var(--gold-bright)); box-shadow: 0 8px 30px rgba(201,168,76,0.25); }
+.whatsapp-card {
+  background: var(--black-card);
+  border: 1px solid var(--border);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.whatsapp-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.whatsapp-card > p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--white-dim);
+  margin-bottom: 2rem;
+}
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1.1rem 1.5rem;
+  background: #25D366;
+  color: #062d16;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.btn-whatsapp:hover {
+  background: #2fe472;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.25);
+}
+.whatsapp-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.whatsapp-number {
+  margin-top: 1.25rem !important;
+  margin-bottom: 0 !important;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.12em;
+  color: var(--gold) !important;
+}
 
 footer { background: var(--black); border-top: 1px solid var(--border); padding: 4rem 0 2rem; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 4rem; }
@@ -387,14 +434,10 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6px) rotate
   .testimonial-card::before { font-size: 4rem; }
   .testimonial-text { font-size: 1rem; margin-bottom: 1.5rem; }
 
-  .contact-form { padding: 1.75rem 1.25rem; }
+  .whatsapp-card { padding: 1.75rem 1.25rem; }
   .contact-info h3 { font-size: 1.35rem; }
   .contact-info p { font-size: 1rem; margin-bottom: 2rem; }
-  .form-group input, .form-group select, .form-group textarea {
-    font-size: 16px;
-    padding: 0.9rem 1rem;
-  }
-  .form-submit { padding: 1.15rem; font-size: 0.7rem; }
+  .btn-whatsapp { font-size: 0.7rem; padding: 1.15rem; }
 
   .centered-label { font-size: 0.55rem; letter-spacing: 0.28em; }
 }

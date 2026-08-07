@@ -1,4 +1,5 @@
 import { getPhoto } from '../data/gallery';
+import { WHATSAPP_URL } from '../data/contact';
 
 const particles = [
   { left: '20%', top: '30%', delay: '0s', duration: '7s' },
@@ -59,8 +60,13 @@ export default function Hero() {
         <a href="#collections" className="btn-primary">
           <span>Explore Collections</span>
         </a>
-        <a href="#contact" className="btn-secondary">
-          Book a Consultation
+        <a
+          href={WHATSAPP_URL}
+          className="btn-secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp Us
         </a>
       </div>
       <div className="scroll-indicator">

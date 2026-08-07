@@ -1,3 +1,5 @@
+import { WHATSAPP_URL, WHATSAPP_DISPLAY } from '../data/contact';
+
 export default function Footer() {
   return (
     <footer>
@@ -38,11 +40,13 @@ export default function Footer() {
                 tk
               </a>
               <a
-                href="mailto:bijouteriechalumeaudor@gmail.com"
+                href={WHATSAPP_URL}
                 className="social-btn"
-                title="Email"
+                title="WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                @
+                wa
               </a>
             </div>
           </div>
@@ -105,8 +109,8 @@ export default function Footer() {
                 <a href="tel:+250795694412">0795 694 412</a>
               </li>
               <li>
-                <a href="mailto:bijouteriechalumeaudor@gmail.com">
-                  bijouteriechalumeaudor@gmail.com
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  WhatsApp {WHATSAPP_DISPLAY}
                 </a>
               </li>
             </ul>

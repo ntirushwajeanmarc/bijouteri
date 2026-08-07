@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useScrollNav, useSmoothScroll } from '../hooks/useScrollNav';
+import { WHATSAPP_URL } from '../data/contact';
 
 const links = [
   { href: '#about', label: 'About' },
@@ -58,15 +59,26 @@ export default function Nav() {
             </li>
           ))}
           <li className="nav-links-cta">
-            <a href="#contact" className="nav-cta nav-cta-mobile" onClick={handleLinkClick}>
-              Book Consultation
+            <a
+              href={WHATSAPP_URL}
+              className="nav-cta nav-cta-mobile"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleLinkClick}
+            >
+              WhatsApp Us
             </a>
           </li>
         </ul>
 
-        <a href="#contact" className="nav-cta nav-cta-desktop">
-          <span className="nav-cta-short">Book</span>
-          <span className="nav-cta-full">Book Consultation</span>
+        <a
+          href={WHATSAPP_URL}
+          className="nav-cta nav-cta-desktop"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="nav-cta-short">Chat</span>
+          <span className="nav-cta-full">WhatsApp Us</span>
         </a>
       </nav>
 
